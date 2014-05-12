@@ -1,0 +1,81 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            /* apply a natural box layout model to all elements */
+            *, *:before, *:after {
+                -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+            }
+            .selectbox {
+                position: relative;
+            }
+            .selectbox-input {
+                border: 1px solid #C2C2C2;
+                border-radius: 3px;
+                padding: 5px 10px;
+                color: #555;
+            }
+            .selectbox-input:focus {
+                border: 1px solid #43a5ff;
+                box-shadow: inset 0 0 2px rgba(0,0,0,.15), 0 0 5px rgba(68,165,255,.50);
+            }
+
+            .selectbox-item.focused {
+                background: #eee;
+            }
+            .selectbox-item.selected {
+                font-weight: bold;
+            }
+
+            .selectbox-list {
+                display: none;
+                height: 100px;
+                overflow-y: auto;
+                position: absolute;
+                border: 1px solid #C2C2C2;
+                border-radius: 3px;
+                background: #fff;
+                margin-top: 2px;
+            }
+            .selectbox-list.active {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="text" />
+        <select id="original">
+            <option value="0">Zero</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+        </select>
+        <select id="test">
+            <option value="0">Zero test</option>
+            <option value="1">One test</option>
+            <option value="2">Two test</option>
+            <option value="3">Zero test</option>
+            <option value="4">One test</option>
+            <option value="5">Two test</option>
+            <option value="6">Zero test</option>
+            <option value="7">One test</option>
+            <option value="8">Two test</option>
+        </select>
+        <input type="text" />
+        <a href="http://www.reservio.com">test</a>
+
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="selectbox.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#test').selectbox({
+
+                });
+            });
+        </script>
+    </body>
+</html>
