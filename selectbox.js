@@ -264,6 +264,7 @@
          */
         onItemClick: function(e) {
             this.selectItem($(e.target).index());
+            this.$input.focus();
         },
 
         /**
