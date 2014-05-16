@@ -1,0 +1,34 @@
+.selectbox {
+    position: relative;
+}
+.selectbox-input {
+    border: 1px solid #C2C2C2;
+    border-radius: 3px;
+    padding: 5px 10px;
+    color: #555;
+}
+.selectbox-input:focus {
+    border: 1px solid #43a5ff;
+    box-shadow: inset 0 0 2px rgba(0,0,0,.15), 0 0 5px rgba(68,165,255,.50);
+}
+
+.selectbox-item.focused {
+    background: #eee;
+}
+.selectbox-item.selected {
+    font-weight: bold;
+}
+
+.selectbox-list {
+    display: none;
+    height: 100px;
+    overflow-y: auto;
+    position: absolute;
+    border: 1px solid #C2C2C2;
+    border-radius: 3px;
+    background: #fff;
+    margin-top: 2px;
+}
+.selectbox-list.active {
+    display: block;
+}
